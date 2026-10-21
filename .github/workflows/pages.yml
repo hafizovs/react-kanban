@@ -26,10 +26,10 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm check
       - name: Build for GitHub Pages
-        run: pnpm exec tsc -b && pnpm exec vite build
+        run: pnpm build
         env:
           GITHUB_PAGES: 'true'
       - uses: actions/upload-pages-artifact@v3
