@@ -28,3 +28,12 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+# AI / agent artifacts (local only)
+AGENTS.md
+docs/
+.cursor/
+.agents/
+CLAUDE.md
+PORTFOLIO.md
+
