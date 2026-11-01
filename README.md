@@ -27,6 +27,10 @@ Optimistic drag-and-drop task board. Three columns start with seeded tasks, and 
 
 Optimistic drag-and-drop task board — React 19, Vite, TanStack Query, dnd-kit, Zustand, MSW.
 
+## Responsive layout
+
+Partial adaptive chrome for phone (~375px) and tablet (~768px): toolbars and panels stack or collapse on narrow viewports, with no page-level horizontal scroll. Desktop-first cores (canvas, boards, dense tables) stay simplified on small screens rather than a full mobile redesign.
+
 ## Scripts
 
 ```bash
