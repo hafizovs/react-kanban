@@ -52,7 +52,7 @@ export function TaskCard({
             <p className="mt-1 text-xs text-[var(--text)]">{assigneeName}</p>
           ) : null}
           {task.description ? (
-            <p className="mt-2 line-clamp-3 text-xs text-[var(--text)]">
+            <p className="mt-2 line-clamp-3 break-words text-xs text-[var(--text)]">
               {truncate(task.description, DESCRIPTION_LIMIT)}
             </p>
           ) : null}
