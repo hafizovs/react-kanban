@@ -91,13 +91,13 @@ export function Board() {
 
   if (tasksQuery.isPending || assigneesQuery.isPending) {
     return (
-      <p className="px-4 py-8 text-left text-sm text-[var(--text)]">Loading board…</p>
+      <p className="px-3 py-8 text-left text-sm text-[var(--text)] sm:px-4">Loading board…</p>
     )
   }
 
   if (tasksQuery.isError || assigneesQuery.isError) {
     return (
-      <div className="flex flex-col items-start gap-3 px-4 py-8 text-left">
+      <div className="flex flex-col items-start gap-3 px-3 py-8 text-left sm:px-4">
         <p className="text-sm text-red-600">Failed to load the board.</p>
         <Button
           type="button"
@@ -119,12 +119,12 @@ export function Board() {
   return (
     <>
       {!hasFilteredResults ? (
-        <p className="px-4 py-6 text-left text-sm text-[var(--text)]">
+        <p className="px-3 py-6 text-left text-sm text-[var(--text)] sm:px-4">
           {hasTasks ? 'No tasks match your filters.' : 'No tasks yet. Create one to get started.'}
         </p>
       ) : null}
       <DndContext sensors={sensors} collisionDetection={closestCorners} onDragEnd={handleDragEnd}>
-        <div className="grid flex-1 gap-4 px-4 pb-6 md:grid-cols-3">
+        <div className="grid min-w-0 flex-1 grid-cols-1 gap-4 px-3 pb-6 sm:px-4 lg:grid-cols-3">
           {COLUMN_IDS.map((columnId) => (
             <BoardColumn
               key={columnId}

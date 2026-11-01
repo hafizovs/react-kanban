@@ -18,9 +18,9 @@ export function FilterBar() {
   })
 
   return (
-    <header className="flex flex-col gap-4 border-b border-[var(--border)] px-4 py-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
-      <div className="flex min-w-0 flex-1 flex-col gap-4 sm:flex-row sm:items-end">
-        <div className="grid w-full max-w-sm gap-2 sm:w-auto">
+    <header className="flex flex-col gap-4 border-b border-[var(--border)] px-3 py-4 sm:px-4 md:flex-row md:flex-wrap md:items-end md:justify-between">
+      <div className="flex min-w-0 flex-1 flex-col gap-4 md:flex-row md:items-end md:gap-4">
+        <div className="grid min-w-0 w-full gap-2 md:max-w-sm md:flex-1">
           <Label htmlFor="task-search">Search tasks</Label>
           <Input
             id="task-search"
@@ -29,7 +29,7 @@ export function FilterBar() {
             onChange={(event) => setSearch(event.target.value)}
           />
         </div>
-        <div className="grid w-full max-w-xs gap-2 sm:w-48">
+        <div className="grid min-w-0 w-full gap-2 md:w-48 md:shrink-0">
           <Label htmlFor="assignee-filter">Assignee</Label>
           <Select
             value={assigneeId ?? ALL_ASSIGNEES}
@@ -51,7 +51,7 @@ export function FilterBar() {
           </Select>
         </div>
       </div>
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex min-w-0 flex-wrap items-center gap-2 md:shrink-0">
         <CreateTaskDialog />
         <ThemeToggle />
         <FailNextMoveToggle />
